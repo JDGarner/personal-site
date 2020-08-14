@@ -1,21 +1,24 @@
-import React, { useState } from "react";
-import Button from "./components/Button";
+import React from "react";
 import styled from "styled-components";
-import { HelloTypeScript } from "./components/HelloTypeScript";
+import Home from "./sections/Home";
+import Work from "./sections/Work";
+import ReadingList from "./sections/ReadingList";
+import Contact from "./sections/Contact";
+import "./index.css";
 
-const Title = styled.h1`
-  color: palevioletred;
+const AppContainer = styled.div`
+  width: 100%;
+  height: 100%;
 `;
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
-
   return (
-    <div>
-      <Title>{counter}</Title>
-      <Button buttonTitle="Click Me" onClick={() => setCounter((c) => c + 1)} />
-      <HelloTypeScript compiler="TypeScript" framework="React" />
-    </div>
+    <AppContainer>
+      <Home />
+      <Work />
+      <ReadingList />
+      <Contact />
+    </AppContainer>
   );
 };
 
