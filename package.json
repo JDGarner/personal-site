@@ -16,6 +16,7 @@
     "react-dom": "^16.13.1",
     "source-map-loader": "^1.0.1",
     "styled-components": "^5.1.1",
+    "styled-icons": "^10.16.0",
     "ts-loader": "^8.0.1",
     "typescript": "^3.9.7",
     "webpack": "^4.43.0",

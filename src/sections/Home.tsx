@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { highlightColorPink, textLightColor } from "../styling/palette";
 import "../components/background/background.scss";
 import Centered from "../components/layout/Centered";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowCircleDown } from "@fortawesome/fontawesome-svg-core";
+import { ArrowIosDownwardOutline } from "@styled-icons/evaicons-outline/ArrowIosDownwardOutline";
 
 interface Props {}
 
@@ -17,6 +16,8 @@ const SectionContainer = styled.section`
 `;
 
 const IntroContainer = styled(Centered)`
+  display: flex;
+  flex-direction: column;
   z-index: 1;
 `;
 
@@ -36,6 +37,7 @@ const IntroHeader = styled.h1`
 
 const Highlight = styled.span`
   color: ${highlightColorPink};
+  font-weight: 600;
 `;
 
 const Home: React.FC = ({}: Props) => {
@@ -58,7 +60,8 @@ const Home: React.FC = ({}: Props) => {
           <br />
           I'm a full stack developer
         </IntroHeader>
-        {/* <FontAwesomeIcon icon={faArrowCircleDown} /> */}
+        {/* <ArrowDownIcon size="58" color={highlightColorPink} /> */}
+        <ArrowIosDownwardOutline size="72" color={highlightColorPink} />
       </IntroContainer>
     </SectionContainer>
   );

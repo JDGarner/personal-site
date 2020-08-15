@@ -1,27 +1,37 @@
 @function multiple-box-shadow($n, $color) {
-  $value: "#{random(2000)}px #{random(2000)}px #{$color}";
+  $value: "#{random(2000)}px #{random(2000)}px #{random(4) + 2}px #{$color}";
   @for $i from 2 through $n {
-    $value: "#{$value}, #{random(2000)}px #{random(2000)}px #{$color}";
+    $value: "#{$value}, #{random(2000)}px #{random(2000)}px #{random(4) + 2}px #{$color}";
   }
 
   @return unquote($value);
 }
 
-$shadows-small: multiple-box-shadow(300, #fff);
-$shadows-medium: multiple-box-shadow(80, #fff);
-$shadows-big: multiple-box-shadow(33, #fff);
+$color1: #fff;
+$color2: #fbf9ac;
+$color3: #f9f396;
+// $color2: #fff;
+// $color3: #fff;
 
-$shadows-small-yellow1: multiple-box-shadow(300, #fbf9ac);
-$shadows-medium-yellow1: multiple-box-shadow(80, #fbf9ac);
-$shadows-big-yellow1: multiple-box-shadow(33, #fbf9ac);
+$shadows-small: multiple-box-shadow(200, $color1);
+$shadows-medium: multiple-box-shadow(50, $color1);
+$shadows-big: multiple-box-shadow(25, $color1);
 
-$shadows-small-yellow2: multiple-box-shadow(300, #f9f396);
-$shadows-medium-yellow2: multiple-box-shadow(80, #f9f396);
-$shadows-big-yellow2: multiple-box-shadow(33, #f9f396);
+$shadows-small-yellow1: multiple-box-shadow(200, $color2);
+$shadows-medium-yellow1: multiple-box-shadow(50, $color2);
+$shadows-big-yellow1: multiple-box-shadow(25, $color2);
+
+$shadows-small-yellow2: multiple-box-shadow(200, $color3);
+$shadows-medium-yellow2: multiple-box-shadow(50, $color3);
+$shadows-big-yellow2: multiple-box-shadow(25, $color3);
 
 $smallStarDuration: 100s;
 $mediumStarDuration: 150s;
 $bigStarDuration: 200s;
+
+$smallSize: 2px;
+$mediumSize: 4px;
+$bigSize: 6px;
 
 @mixin stars($size, $shadows, $animDuration) {
   width: $size;
@@ -38,39 +48,39 @@ html {
 }
 
 .stars-small-white {
-  @include stars(1px, $shadows-small, $smallStarDuration);
+  @include stars($smallSize, $shadows-small, $smallStarDuration);
 }
 
 .stars-medium-white {
-  @include stars(2px, $shadows-medium, $mediumStarDuration);
+  @include stars($mediumSize, $shadows-medium, $mediumStarDuration);
 }
 
 .stars-big-white {
-  @include stars(3px, $shadows-big, $bigStarDuration);
+  @include stars($bigSize, $shadows-big, $bigStarDuration);
 }
 
 .stars-small-yellow1 {
-  @include stars(1px, $shadows-small-yellow1, $smallStarDuration * 1.25);
+  @include stars($smallSize, $shadows-small-yellow1, $smallStarDuration * 1.25);
 }
 
 .stars-medium-yellow1 {
-  @include stars(2px, $shadows-medium-yellow1, $mediumStarDuration * 0.75);
+  @include stars($mediumSize, $shadows-medium-yellow1, $mediumStarDuration * 0.75);
 }
 
 .stars-big-yellow1 {
-  @include stars(3px, $shadows-big-yellow1, $bigStarDuration * 1.25);
+  @include stars($bigSize, $shadows-big-yellow1, $bigStarDuration * 1.25);
 }
 
 .stars-small-yellow2 {
-  @include stars(1px, $shadows-small-yellow2, $smallStarDuration * 0.75);
+  @include stars($smallSize, $shadows-small-yellow2, $smallStarDuration * 0.75);
 }
 
 .stars-medium-yellow2 {
-  @include stars(2px, $shadows-medium-yellow2, $mediumStarDuration * 1.25);
+  @include stars($mediumSize, $shadows-medium-yellow2, $mediumStarDuration * 1.25);
 }
 
 .stars-big-yellow2 {
-  @include stars(3px, $shadows-big-yellow2, $bigStarDuration * 0.75);
+  @include stars($bigSize, $shadows-big-yellow2, $bigStarDuration * 0.75);
 }
 
 @keyframes animStar {
