@@ -8,10 +8,10 @@
 }
 
 $color1: #fff;
-$color2: #fbf9ac;
-$color3: #f9f396;
-// $color2: #fff;
-// $color3: #fff;
+// $color2: #fbf9ac;
+// $color3: #f9f396;
+$color2: #fff;
+$color3: #fff;
 
 $shadows-small: multiple-box-shadow(200, $color1);
 $shadows-medium: multiple-box-shadow(50, $color1);
@@ -30,8 +30,8 @@ $mediumStarDuration: 150s;
 $bigStarDuration: 200s;
 
 $smallSize: 2px;
-$mediumSize: 4px;
-$bigSize: 6px;
+$mediumSize: 3px;
+$bigSize: 4px;
 
 @mixin stars($size, $shadows, $animDuration) {
   width: $size;
