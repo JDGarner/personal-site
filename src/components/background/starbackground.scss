@@ -41,12 +41,6 @@ $bigSize: 4px;
   animation: animStar $animDuration linear infinite;
 }
 
-html {
-  height: 100%;
-  overflow: hidden;
-  background: #1b2735;
-}
-
 .stars-small-white {
   @include stars($smallSize, $shadows-small, $smallStarDuration);
 }

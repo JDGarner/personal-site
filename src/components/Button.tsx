@@ -1,12 +1,12 @@
 import React from "react";
 
 export interface ButtonProps {
-  buttonTitle: string;
+  children: React.ReactNode;
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-const Button = ({ buttonTitle, onClick }: ButtonProps) => {
-  return <button onClick={onClick}>{buttonTitle}</button>;
+const Button = ({ children, onClick }: ButtonProps) => {
+  return <button onClick={onClick}>{children}</button>;
 };
 
 export default Button;
