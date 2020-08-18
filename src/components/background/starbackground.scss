@@ -7,23 +7,11 @@
   @return unquote($value);
 }
 
-$color1: #fff;
-// $color2: #fbf9ac;
-// $color3: #f9f396;
-$color2: #fff;
-$color3: #fff;
+$starColor: #fff;
 
-$shadows-small: multiple-box-shadow(200, $color1);
-$shadows-medium: multiple-box-shadow(50, $color1);
-$shadows-big: multiple-box-shadow(25, $color1);
-
-$shadows-small-yellow1: multiple-box-shadow(200, $color2);
-$shadows-medium-yellow1: multiple-box-shadow(50, $color2);
-$shadows-big-yellow1: multiple-box-shadow(25, $color2);
-
-$shadows-small-yellow2: multiple-box-shadow(200, $color3);
-$shadows-medium-yellow2: multiple-box-shadow(50, $color3);
-$shadows-big-yellow2: multiple-box-shadow(25, $color3);
+$shadows-small: multiple-box-shadow(600, $starColor);
+$shadows-medium: multiple-box-shadow(150, $starColor);
+$shadows-big: multiple-box-shadow(75, $starColor);
 
 $smallStarDuration: 100s;
 $mediumStarDuration: 150s;
@@ -51,30 +39,6 @@ $bigSize: 4px;
 
 .stars-big-white {
   @include stars($bigSize, $shadows-big, $bigStarDuration);
-}
-
-.stars-small-yellow1 {
-  @include stars($smallSize, $shadows-small-yellow1, $smallStarDuration * 1.25);
-}
-
-.stars-medium-yellow1 {
-  @include stars($mediumSize, $shadows-medium-yellow1, $mediumStarDuration * 0.75);
-}
-
-.stars-big-yellow1 {
-  @include stars($bigSize, $shadows-big-yellow1, $bigStarDuration * 1.25);
-}
-
-.stars-small-yellow2 {
-  @include stars($smallSize, $shadows-small-yellow2, $smallStarDuration * 0.75);
-}
-
-.stars-medium-yellow2 {
-  @include stars($mediumSize, $shadows-medium-yellow2, $mediumStarDuration * 1.25);
-}
-
-.stars-big-yellow2 {
-  @include stars($bigSize, $shadows-big-yellow2, $bigStarDuration * 0.75);
 }
 
 @keyframes animStar {

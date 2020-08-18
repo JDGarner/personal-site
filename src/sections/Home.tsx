@@ -40,7 +40,7 @@ const Home: React.FC = ({}: Props) => {
       <StarBackground />
       <IntroContainer>
         <IntroHeader>
-          Hello, I'm <Highlight>Jamie Garner</Highlight>
+          Hi, I'm <Highlight>Jamie Garner</Highlight>
           <br />
           I'm a full stack developer
         </IntroHeader>

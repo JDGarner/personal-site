@@ -20,12 +20,6 @@ const StarBackground: React.FC = ({}: Props) => {
       <div className="stars-small-white"></div>
       <div className="stars-medium-white"></div>
       <div className="stars-big-white"></div>
-      <div className="stars-small-yellow1"></div>
-      <div className="stars-medium-yellow1"></div>
-      <div className="stars-big-yellow1"></div>
-      <div className="stars-small-yellow2"></div>
-      <div className="stars-medium-yellow2"></div>
-      <div className="stars-big-yellow2"></div>
     </StarsContainer>
   );
 };
