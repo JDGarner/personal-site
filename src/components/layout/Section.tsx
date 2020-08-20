@@ -8,8 +8,9 @@ export const Section = styled.section`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-center;
   background-color: ${(props: SectionProps) => props.backgroundColor};
   padding: 3em;
 `;

@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   entry: "./index.tsx",
@@ -8,6 +9,16 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 10000,
+            name: "assets/[name].[ext]",
+          },
+        },
+      },
       {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
@@ -38,4 +49,8 @@ module.exports = {
       filename: "./index.html",
     }),
   ],
+  devServer: {
+    contentBase: path.resolve(__dirname, "dist"),
+    publicPath: "/",
+  },
 };
