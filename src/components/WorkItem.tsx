@@ -1,30 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-
-const gallipoliImage: string = require("../assets/gallipoli.png").default;
-const wordMonkeyImage: string = require("../assets/wordmonkey.png").default;
-
-interface Images {
-  [key: string]: string;
-}
-
-const images: Images = {
-  wordmonkey: wordMonkeyImage,
-  gallipoli: gallipoliImage,
-};
+import Centered from "./layout/Centered";
 
 export interface Props {
-  id: string;
+  imgSrc: string;
   imageName: string;
 }
 
 const Image = styled.img`
   /* height: 12em; */
-  width: 12em;
+  width: 18em;
 `;
 
-const WorkItem = ({ id, imageName }: Props) => {
-  return <Image src={images[id]} />;
+const WorkItem = ({ imgSrc, imageName }: Props) => {
+  return (
+    <Centered>
+      <Image src={imgSrc} />
+    </Centered>
+  );
 };
 
 export default WorkItem;

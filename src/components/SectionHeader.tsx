@@ -19,6 +19,7 @@ const Header = styled.h2`
   font-size: 2.5em;
   text-align: center;
   font-weight: 700;
+  padding-bottom: 2em;
 `;
 
 const SectionHeader = ({ title, variant }: Props) => {
