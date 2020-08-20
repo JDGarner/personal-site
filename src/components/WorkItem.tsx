@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const gallipoliImage = require("../assets/gallipoli.png").default;
-const wordMonkeyImage = require("../assets/wordmonkey.png").default;
+const gallipoliImage: string = require("../assets/gallipoli.png").default;
+const wordMonkeyImage: string = require("../assets/wordmonkey.png").default;
 
-const images = {
+interface Images {
+  [key: string]: string;
+}
+
+const images: Images = {
   wordmonkey: wordMonkeyImage,
   gallipoli: gallipoliImage,
 };
@@ -20,8 +24,7 @@ const Image = styled.img`
 `;
 
 const WorkItem = ({ id, imageName }: Props) => {
-  return <Image src={wordMonkeyImage} />;
-  // return <Image src={images[id]} />;
+  return <Image src={images[id]} />;
 };
 
 export default WorkItem;
