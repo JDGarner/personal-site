@@ -5,6 +5,7 @@ import styled from "styled-components";
 import SectionHeader from "../components/SectionHeader";
 import workItems from "../data/workItems";
 import WorkItem from "../components/WorkItem";
+import { tablet } from "../styling/device-sizes";
 
 const gallipoliImage: string = require("../assets/gallipoli.png").default;
 const wordMonkeyImage: string = require("../assets/wordmonkey.png").default;
@@ -25,10 +26,12 @@ const images: Images = {
 interface Props {}
 
 const WorkItemList = styled.div`
-  display: flex;
+  width: 100%;
+  padding: 0 5%;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 `;
 
 const Work: React.FC = ({}: Props) => {

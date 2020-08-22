@@ -1,7 +1,3 @@
-// Highlight Color2
-// TextLight
-// TextDark
-
 export const backgroundColorWhite = "#fff";
 export const backgroundColorOffWhite = "#f5f5f5";
 export const backgroundColorDark = "#1b2735";

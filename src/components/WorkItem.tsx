@@ -1,22 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import Centered from "./layout/Centered";
+import { mobile, tablet } from "../styling/device-sizes";
 
 export interface Props {
   imgSrc: string;
-  imageName: string;
 }
 
-const Image = styled.img`
-  /* height: 12em; */
-  width: 18em;
+export interface ContainerProps {
+  index: number;
+}
+
+const ImageContainer = styled.div`
+  display: flex;
 `;
 
-const WorkItem = ({ imgSrc, imageName }: Props) => {
+const Image = styled.img`
+  max-height: 100%;
+  max-width: 100%;
+`;
+
+const WorkItem = ({ imgSrc }: Props) => {
   return (
-    <Centered>
+    <ImageContainer>
       <Image src={imgSrc} />
-    </Centered>
+    </ImageContainer>
   );
 };
 
